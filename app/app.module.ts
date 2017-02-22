@@ -5,6 +5,8 @@ import { AppComponent }   from './app.component';
 import { TapListComponent }  from './tap-list.component';
 import { NewTapComponent }  from './new-tap.component';
 import { PourTapComponent }  from './pour-tap.component';
+import { EditTapComponent }  from './edit-tap.component';
+import { VanishingPipe } from './vanishing.pipe';
 
 @NgModule({
   imports: [
@@ -16,6 +18,8 @@ import { PourTapComponent }  from './pour-tap.component';
     TapListComponent,
     NewTapComponent,
     PourTapComponent,
+    EditTapComponent,
+    VanishingPipe,
   ],
   bootstrap:    [ AppComponent ]
 })

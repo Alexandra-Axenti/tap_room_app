@@ -8,7 +8,13 @@ import { Tap } from './tap.model';
     <h1>Bar Night Owl</h1>
     <tap-list
       [childTapList] = "masterTapList"
+      (clickSender) = "showDetails($event)"
+      class='col-xs-12'
     ></tap-list>
+    <edit-tap
+      [childSelectedTap]="selectedTap"
+      (doneClickedSender)="finishedEditing()"
+    ></edit-tap>
     <new-tap
       (newTapSender) = "addTap($event)"
     ></new-tap>
@@ -24,6 +30,13 @@ export class AppComponent {
           new Tap("Warsteiner Non-Alcoholic", "Warsteiner", 350, 0.00),
       ];
 
+selectedTap: Tap = null;
+showDetails(clickedTap: Tap) {
+  this.selectedTap = clickedTap;
+  }
+finishedEditing() {
+  this.selectedTap = null;
+  }
 addTap(newTapFromChild: Tap) {
   this.masterTapList.push(newTapFromChild);
   }
