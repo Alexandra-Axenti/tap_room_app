@@ -1,0 +1,22 @@
+{
+  "name": "tap_room_app",
+  "description": "practice angular",
+  "main": "gulpfile.js",
+  "authors": [
+    "Alexandra-Axenti <axentialexandra@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "http://github.com/Alexandra-Axenti/tap_room_app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.17.1"
+  }
+}
