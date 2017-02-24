@@ -11,11 +11,11 @@ import { Tap } from './tap.model';
     <option value="needRefill">Show kegs that need to be refilled</option>
   </select>
   <div *ngFor="let currentTap of childTapList | vanishing: selectedVanishing">
-    <h3 class='col-xs-4'>{{ currentTap.name }} {{ currentTap.brand }} {{ currentTap.price }} {{ currentTap.alcohol }} {{currentTap.kegSize}}
+    <h3 class='col-xs-4'>{{ currentTap.name }} <br> {{ currentTap.brand }} <br> $ {{ currentTap.price }} <br> {{ currentTap.alcohol }} <br> {{currentTap.kegSize}} l
       <pour-tap
         [childSelectedTap] = "currentTap"
-      ></pour-tap>
-      <button
+      ></pour-tap><br>
+      <button id='edit'
         (click)="editButtonHasBeenClicked(currentTap)"
       >Edit</button>
     </h3>

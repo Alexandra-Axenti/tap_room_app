@@ -5,7 +5,7 @@ import { Tap } from './tap.model';
   selector: 'pour-tap',
   template:`
     <span>
-    <button (click)="pourTap()">Pour</button>
+    <button id='pour' (click)="pourTap()"> -- </button>
     </span>
   `
 })

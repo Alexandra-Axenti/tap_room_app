@@ -9,7 +9,6 @@ import { Tap } from './tap.model';
     <tap-list
       [childTapList] = "masterTapList"
       (clickSender) = "showDetails($event)"
-      class='col-xs-12'
     ></tap-list>
     <edit-tap
       [childSelectedTap]="selectedTap"
@@ -17,7 +16,7 @@ import { Tap } from './tap.model';
     ></edit-tap>
     <new-tap
       (newTapSender) = "addTap($event)"
-    ></new-tap>
+    >New Tap</new-tap>
   </div>
   `
 })
@@ -27,7 +26,7 @@ export class AppComponent {
           new Tap("Asahi Dry Zero", "Asahi", 200, 0.04),
           new Tap("Heineken Light", "Heneiken", 250, 0.05),
           new Tap("Gwei Lo Pale Ale", "Gwei Lo", 300, 0.07),
-          new Tap("Warsteiner Non-Alcoholic", "Warsteiner", 350, 0.00),
+          new Tap("Warsteiner Zero", "Warsteiner", 350, 0.00),
       ];
 
 selectedTap: Tap = null;
